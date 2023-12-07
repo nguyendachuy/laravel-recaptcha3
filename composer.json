@@ -1,0 +1,46 @@
+{
+    "name": "nguyendachuy/laravel-recaptcha3",
+    "description": "This library provides support for Google reCAPTCHA v3 in Laravel. This library makes it easy to add reCAPTCHA to your Laravel application to protect against spam and bots.",
+    "keywords": [
+        "Laravel",
+        "reCAPTCHA v3",
+        "Laravel reCAPTCHA",
+        "reCAPTCHA",
+        "Google reCAPTCHA",
+        "form validation"
+    ],
+    "homepage": "https://github.com/nguyendachuy/laravel-recaptcha3",
+    "authors": [
+        {
+            "name": "Nguyen Dac Huy",
+            "email": "huy.cit@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "^6.*|^7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NguyenHuy\\Recaptcha\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NguyenHuy\\Recaptcha\\RecaptchaServiceProvider"
+            ],
+            "aliases": {
+                "Recaptcha": "NguyenHuy\\Recaptcha\\Recaptcha"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}
