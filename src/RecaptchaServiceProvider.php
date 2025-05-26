@@ -34,8 +34,11 @@ class RecaptchaServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/recaptcha.php', 'recaptcha');
 
-        AliasLoader::getInstance()->alias('Recaptcha', Recaptcha::class);
+        $this->app->singleton('laravel-recaptcha', function () {
+            return new CaptchaV3();
+        });
 
+        AliasLoader::getInstance()->alias('Recaptcha', Recaptcha::class);
     }
 
     /**
